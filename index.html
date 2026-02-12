@@ -150,27 +150,6 @@ a {
 </style>
 </head>
 
-<!-- Lightbox Container -->
-<div class="lightbox" id="lightbox">
-    <img id="lightbox-img" src="" alt="">
-</div>
-
-<script>
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-document.querySelectorAll(".gallery img").forEach(img => {
-    img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-    });
-});
-
-lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-});
-</script>
-
 
 <body>
 
@@ -419,6 +398,29 @@ We will remember them.”
 <footer>
 <p>In memory of Patrick Cahill (1894–1917)</p>
 </footer>
+
+<!-- Lightbox Container -->
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.querySelectorAll(".gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+    });
+});
+
+lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+</script>
+
 
 </body>
 </html>
